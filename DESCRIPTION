@@ -12,8 +12,10 @@ RoxygenNote: 7.3.1
 Imports: 
     DBI,
     dplyr,
+    rlang,
     RSQLite,
     tidyr,
+    tidyselect,
     xml2
 Suggests: 
     testthat (>= 3.0.0)
