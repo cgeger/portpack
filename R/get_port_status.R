@@ -8,7 +8,7 @@
 #' @export
 get_port_status <- function(){
   scrape <- scrape_ports()
-  (port_status <- scrape %>%
+  port_status <- scrape %>%
     select(.data$port_number, starts_with("commercial"),
            starts_with("passenger"),
            starts_with("pedestrian")) %>%
@@ -17,6 +17,6 @@ get_port_status <- function(){
                           starts_with("pedestrian")), names_to = "lane_type") %>%
     filter(!.data$value %in% c("", "N/A")) %>%
     separate(.data$lane_type, into = c("modality", "lane_type", "observation"), sep = "\\.") %>%
-    pivot_wider(names_from = "observation", values_from = "value") %>% as.data.frame())
+    pivot_wider(names_from = "observation", values_from = "value") %>% as.data.frame()
   return(port_status)
 }
