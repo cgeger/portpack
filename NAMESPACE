@@ -2,6 +2,7 @@
 
 export(get_port_data)
 export(get_port_status)
+export(plot_waittimes)
 export(port_collector)
 export(scrape_ports)
 import(dplyr)
