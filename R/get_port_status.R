@@ -17,6 +17,7 @@ get_port_status <- function(){
                           starts_with("pedestrian")), names_to = "lane_type") %>%
     filter(!.data$value %in% c("", "N/A")) %>%
     separate(.data$lane_type, into = c("modality", "lane_type", "observation"), sep = "\\.") %>%
-    pivot_wider(names_from = "observation", values_from = "value") %>% as.data.frame()
+    pivot_wider(names_from = "observation", values_from = "value") %>%
+    mutate_at(c("delay_minutes", "lanes_open"), as.numeric) %>% as.data.frame()
   return(port_status)
 }
