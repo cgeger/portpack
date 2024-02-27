@@ -1,4 +1,4 @@
-## code to prepare `port_collector` dataset goes here
+## code to prepare `status_collector` dataset goes here
 #' collects current port status
 #'
 #' @param db_name name of the database (default: "portpack.db")
