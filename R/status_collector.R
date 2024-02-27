@@ -3,7 +3,7 @@
 #'
 #' @param db_name name of the database (default: "portpack.db")
 #' @export
-port_collector <- function(db_name = "portpack.db") {
+status_collector <- function(db_name = "portpack.db") {
 
   #get the dataset
   port_status <- get_port_status()
