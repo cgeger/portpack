@@ -3,6 +3,9 @@
 #' @param selected_port a port id number
 #' @param mod the modality of interest
 #' @param ln_typ the lane type of interest
+#' @import ggplot2
+#' @import tidyr
+#' @import dplyr
 #' @importFrom rlang .data
 #' @return a plot
 #' @export
@@ -32,3 +35,4 @@ plot_waittimes <- function(selected_port = "535503", mod = "passenger", ln_typ =
 
   return(p)
 }
+plot_waittimes()
