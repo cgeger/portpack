@@ -1,6 +1,6 @@
 #' initialize port data database
 #'
-#' @param db_name
+#' @param db_name name of SQLite database
 #' @export
 portpackdb <- function(db_name = "portpack.db") {
   con <- DBI::dbConnect(RSQLite::SQLite(), paste0("inst/extdata/", db_name))
