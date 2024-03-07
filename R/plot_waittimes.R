@@ -35,4 +35,3 @@ plot_waittimes <- function(selected_port = "535503", mod = "passenger", ln_typ =
 
   return(p)
 }
-plot_waittimes()
